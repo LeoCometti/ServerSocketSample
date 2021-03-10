@@ -34,6 +34,7 @@ int __cdecl main(int argc, char* argv[])
 	if ((s = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) == INVALID_SOCKET)
 	{
 		printf("Could not create socket : %d", WSAGetLastError());
+		exit(EXIT_FAILURE);
 	}
 	printf("Socket created.\n");
 
